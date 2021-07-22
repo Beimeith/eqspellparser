@@ -218,6 +218,8 @@ namespace EQSpellParser
                 parser = ParseSpell20210113;
             if (fields.Length == 168 && version < 20210113)
                 parser = ParseSpell20210113;
+            if (fields.Length == 167 && version < 20210715)
+                parser = ParseSpell20210715;
 
             return parser(fields, version);
         }
